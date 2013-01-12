@@ -1,3 +1,10 @@
+/*
+  If you're interested in this CSS, cool, thanks
+  I'd recommend editing the scss file and re-compiling the css
+  that file is at https://github.com/maxjacobson/marked-themes/blob/master/sass/prose.scss
+  it has some comments and stuff and scss is fun
+  you can compile online at http://sass-lang.com/try.html
+*/
 @font-face {
   font-family: 'Faster One';
   font-style: normal;
@@ -19,7 +26,7 @@
   src: local("Noticia Text"), local("NoticiaText-Regular"), url(http://themes.googleusercontent.com/static/fonts/noticiatext/v3/wdyV6x3eKpdeUPQ7BJ5uUKRDOzjiPcYnFooOUGCOsRk.woff) format("woff");
 }
 
-/* line 35, ../sass/prose.scss */
+/* line 37, ../sass/prose.scss */
 body {
   background-color: #e7eec7;
   color: black;
@@ -28,68 +35,76 @@ body {
   width: 500px;
 }
 
-/* line 43, ../sass/prose.scss */
+/* line 45, ../sass/prose.scss */
 a {
   color: #ca2cc3;
 }
-
 /* line 47, ../sass/prose.scss */
+a:hover {
+  color: #880075;
+}
+/* line 48, ../sass/prose.scss */
+a:visited {
+  color: #880075;
+}
+
+/* line 51, ../sass/prose.scss */
 img {
   width: 100%;
   margin: 1.5em auto;
 }
 
-/* line 52, ../sass/prose.scss */
+/* line 56, ../sass/prose.scss */
 blockquote {
   margin: 0 20px;
   padding: 0 0 0 10px;
   border-left: 3px solid #ca2cc3;
 }
 
-/* line 59, ../sass/prose.scss */
+/* line 63, ../sass/prose.scss */
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   text-transform: lowercase;
 }
 
-/* line 65, ../sass/prose.scss */
+/* line 69, ../sass/prose.scss */
 h1:first-letter, h2:first-letter, h3:first-letter, h4:first-letter, h5:first-letter, h6:first-letter {
   text-transform: capitalize;
 }
 
-/* line 69, ../sass/prose.scss */
+/* line 73, ../sass/prose.scss */
 h1 {
   font-family: "Faster One", serif;
   font-size: 250%;
 }
 
-/* line 74, ../sass/prose.scss */
+/* line 78, ../sass/prose.scss */
 h2, h3, h4, h5, h6 {
   font-family: "Oleo Script Swash Caps", serif;
 }
 
-/* line 78, ../sass/prose.scss */
+/* line 82, ../sass/prose.scss */
 h2 {
   font-size: 175%;
 }
 
-/* line 82, ../sass/prose.scss */
+/* line 86, ../sass/prose.scss */
 h3, h4, h5, h6 {
   font-size: 125%;
 }
 
-/* line 86, ../sass/prose.scss */
+/* line 90, ../sass/prose.scss */
 p + p {
   margin-top: -1em;
   text-indent: 1.5em;
 }
 
-/* line 91, ../sass/prose.scss */
+/* line 95, ../sass/prose.scss */
 ul {
   list-style-type: square;
 }
 
-/* line 95, ../sass/prose.scss */
+/* line 99, ../sass/prose.scss */
 hr {
   padding: 0;
   margin: 0;
@@ -98,13 +113,13 @@ hr {
   color: black;
 }
 
-/* line 102, ../sass/prose.scss */
+/* line 106, ../sass/prose.scss */
 hr:after {
   content: "\2724\a0 \2724\a0 \2724";
 }
 
 @media only screen and (max-width: 500px) {
-  /* line 107, ../sass/prose.scss */
+  /* line 116, ../sass/prose.scss */
   body {
     padding: 0 10px;
     width: 90%;
