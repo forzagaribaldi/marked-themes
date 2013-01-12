@@ -14,7 +14,7 @@ Includes the [scss][] I wrote as well as the css it compiles into, which marked 
 
 ### Prose (aka the only one)
 
-![](prose.png)
+![](http://d.pr/i/Iawe+)
 
 It's nice for writing fiction.
 
