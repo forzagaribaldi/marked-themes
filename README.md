@@ -10,6 +10,8 @@ Includes the [scss][] I wrote as well as the css it compiles into, which marked 
 
 [scss]: http://sass-lang.com
 
+With the `config.rb` file and the way the folders are organized, you can just run `compass watch` and modify the scss files and the css files will be automatically updated.
+
 ## examples
 
 ### Prose (aka the only one)
