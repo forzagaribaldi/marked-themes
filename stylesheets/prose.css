@@ -1,0 +1,112 @@
+@font-face {
+  font-family: 'Faster One';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Faster One"), local("FasterOne-Regular"), url(http://themes.googleusercontent.com/static/fonts/fasterone/v1/R45a6_a3GGq28ugU8uxGWb3hpw3pgy2gAi-Ip7WPMi0.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Oleo Script Swash Caps';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Oleo Script Swash Caps"), local("OleoScriptSwashCaps-Regular"), url(http://themes.googleusercontent.com/static/fonts/oleoscriptswashcaps/v1/vdWhGqsBUAP-FF3NOYTe4pakf2VKGDa1aHLWGf__tlnr7w4p9aSvGirXi6XmeXNA.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Noticia Text';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Noticia Text"), local("NoticiaText-Regular"), url(http://themes.googleusercontent.com/static/fonts/noticiatext/v3/wdyV6x3eKpdeUPQ7BJ5uUKRDOzjiPcYnFooOUGCOsRk.woff) format("woff");
+}
+
+/* line 35, ../sass/prose.scss */
+body {
+  background-color: #e7eec7;
+  color: black;
+  font-family: "Noticia Text", sans-serif;
+  margin: 50px auto;
+  width: 500px;
+}
+
+/* line 43, ../sass/prose.scss */
+a {
+  color: #ca2cc3;
+}
+
+/* line 47, ../sass/prose.scss */
+img {
+  width: 100%;
+  margin: 1.5em auto;
+}
+
+/* line 52, ../sass/prose.scss */
+blockquote {
+  margin: 0 20px;
+  padding: 0 0 0 10px;
+  border-left: 3px solid #ca2cc3;
+}
+
+/* line 59, ../sass/prose.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  text-transform: lowercase;
+}
+
+/* line 65, ../sass/prose.scss */
+h1:first-letter, h2:first-letter, h3:first-letter, h4:first-letter, h5:first-letter, h6:first-letter {
+  text-transform: capitalize;
+}
+
+/* line 69, ../sass/prose.scss */
+h1 {
+  font-family: "Faster One", serif;
+  font-size: 250%;
+}
+
+/* line 74, ../sass/prose.scss */
+h2, h3, h4, h5, h6 {
+  font-family: "Oleo Script Swash Caps", serif;
+}
+
+/* line 78, ../sass/prose.scss */
+h2 {
+  font-size: 175%;
+}
+
+/* line 82, ../sass/prose.scss */
+h3, h4, h5, h6 {
+  font-size: 125%;
+}
+
+/* line 86, ../sass/prose.scss */
+p + p {
+  margin-top: -1em;
+  text-indent: 1.5em;
+}
+
+/* line 91, ../sass/prose.scss */
+ul {
+  list-style-type: square;
+}
+
+/* line 95, ../sass/prose.scss */
+hr {
+  padding: 0;
+  margin: 0;
+  border: none;
+  text-align: center;
+  color: black;
+}
+
+/* line 102, ../sass/prose.scss */
+hr:after {
+  content: "\2724\a0 \2724\a0 \2724";
+}
+
+@media only screen and (max-width: 500px) {
+  /* line 107, ../sass/prose.scss */
+  body {
+    padding: 0 10px;
+    width: 90%;
+  }
+}

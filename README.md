@@ -1,4 +1,24 @@
-marked-themes
-=============
+# Marked Themes
 
-Some CSS for the marked markdown processor
+## about
+
+Some CSS for the [Marked][] markdown processor.
+
+[Marked]: http://markedapp.com
+
+Includes the [scss][] I wrote as well as the css it compiles into, which marked uses.
+
+[scss]: http://sass-lang.com
+
+## examples
+
+### Prose (aka the only one)
+
+![](prose.png)
+
+It's nice for writing fiction.
+
+* paragraphs are indented like in books, where the first paragraph of a section is not indented. I wrote about why I like this [here](http://www.maxjacobson.net/2012-03-21-indenting-paragraphs-online).
+* includes some google web fonts
+* responsive
+* cool horizontal rule w/ unicode symbols (v literary looking) which I wrote about [here](http://www.maxjacobson.net/2012-12-31-the-horizontal-rule)
