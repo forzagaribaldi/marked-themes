@@ -1,12 +1,21 @@
-// some color variables for quick access
-
+// this scss is meant to be used with marked (markedapp.com, @markedapp) for prose
+// https://github.com/maxjacobson/marked-themes
+// by max jacobson (maxjacobson.net, @maxjacobson)
+// use freely
+//
+// some variables for simple edits
 $background: #E7EEC7;
+$invertbg: #343036; // when high contrast is turned on
+$inverttext: #D7D2E6;
 $text: #000;
 $link: #CA2CC3;
 $link-hover: #880075;
 $link-visited: #880075;
 $quoteborder: #CA2CC3;
 $liststyle: square; // other options here: http://www.w3schools.com/cssref/pr_list-style-type.asp
+$liststyle2: disc; // nested
+$liststyle3: circle; // nested once more
+$bodywidth: 850px;
 
 // first here are the google web fonts
 
@@ -35,16 +44,16 @@ $liststyle: square; // other options here: http://www.w3schools.com/cssref/pr_li
 }
 
 body {
-  background-color: $background;
   color: $text;
-  font-family: 'Noticia Text', sans-serif;
+  font-size: 1.5em;
+  font-family: 'Noticia Text', serif;
   margin: 50px auto;
-  width: 500px;
+  width: $bodywidth;
 }
 
 a {
   color: $link;
-  &:hover { color: $link-hover }
+  &:hover { color: $link-hover; }
   &:visited { color: $link-visited; }
 }
 
@@ -54,20 +63,17 @@ img {
 }
 
 blockquote {
-  margin: 0 20px;
-  padding: 0 0 0 10px;
+  margin: 0 3em;
+  padding: 0 0 0 0.5em;
   border-left: 3px solid $quoteborder;
+  p+p {
+    // I think it looks better to not indent paragraphs in block quotes
+    text-indent: 0;
+  }
 }
-
 
 h1,h2,h3,h4,h5,h6 {
   font-weight: normal;
-  text-transform: lowercase;
-}
-
-// doing this text transform nonsense because an all-caps header looks really bad in the font I chose
-h1:first-letter, h2:first-letter, h3:first-letter, h4:first-letter, h5:first-letter, h6:first-letter {
-  text-transform: capitalize;
 }
 
 h1 {
@@ -88,6 +94,7 @@ h3, h4, h5, h6 {
 }
 
 p+p {
+  // refers to paragraphs that directly follow a paragraph
   margin-top: -1em;
   text-indent: 1.5em;
 }
@@ -96,25 +103,90 @@ ul {
   list-style-type: $liststyle;
 }
 
+li > ul {
+  // nested once
+  list-style-type: $liststyle2;
+}
+
+li > ul > li > ul {
+  // nested twice
+  list-style-type: $liststyle3;
+}
+
+a.footnote {
+  // eg, the [1] that gets inserted into your text which you click on to go to the footnote
+  font-size: 50%;
+  vertical-align: super;
+}
+
 hr {
   padding: 0;
   margin: 0;
   border: none;
   text-align: center;
   color: black;
-}
-hr:after {
-  // if you want to change the symbol, read this
-  // `\a0 ` becomes a space (note the trailing space)
-  // for symbols use the code hex with a leading \
-  // see the right-most code hex column here: http://www.danshort.com/HTMLentities/index.php?w=dingb
-  // you would take something like `&#x2701;` and change it to `\2701` in this context
-  content: "\2724\a0 \2724\a0 \2724";
+  &:after {
+    // if you want to change the symbol, read this
+    // `\a0 ` becomes a space (note the trailing space)
+    // for symbols use the code hex with a leading \
+    // see the right-most code hex column here: http://www.danshort.com/HTMLentities/index.php?w=dingb
+    // you would take something like `&#x2701;` and change it to `\2701` in this context
+    content: "\2724\a0 \2724\a0 \2724";
+  }
 }
 
-@media only screen and (max-width: 500px) {
+// this from http://support.markedapp.com/kb/how-to-tips-and-tricks/writing-custom-css-for-marked
+.poetry pre code {
+  font-family:Georgia, Garamond, serif;
+  font-style:italic;
+  font-size:110% !important;
+  line-height:1.6em;
+  display:block;
+  margin-left:1em;
+}
+
+div.footnotes {
+  hr {
+    // the hr that precedes the footnotes should look different
+    margin: 1em 0;
+    width: 75%;
+    border-style: dashed;
+    border-width: 1px 0 0 0;
+    border-color: $text;
+    &:after {
+      content: "";
+    }
+  }
+  p {
+    display: inline;
+  }
+}
+
+@media screen {
   body {
+    // putting this in the screen section means when you print, it will use the default (white) background
+    background-color: $background;
+  }
+  .inverted {
+    background: $invertbg !important;
+    *:not(a) { // everything but links will be affected
+      color: $inverttext !important;
+    }
+  }
+}
+
+@media only screen and (max-width: $bodywidth) {
+  body {
+    font-size: 1em;
     padding: 0 10px;
+    width: 90%;
+  }
+}
+
+@media print {
+  body {
+    font-size: 1em;
+    padding: 1em;
     width: 90%;
   }
 }

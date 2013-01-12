@@ -1,10 +1,3 @@
-/*
-  If you're interested in this CSS, cool, thanks
-  I'd recommend editing the scss file and re-compiling the css
-  that file is at https://github.com/maxjacobson/marked-themes/blob/master/sass/prose.scss
-  it has some comments and stuff and scss is fun
-  you can compile online at http://sass-lang.com/try.html
-*/
 @font-face {
   font-family: 'Faster One';
   font-style: normal;
@@ -26,85 +19,99 @@
   src: local("Noticia Text"), local("NoticiaText-Regular"), url(http://themes.googleusercontent.com/static/fonts/noticiatext/v3/wdyV6x3eKpdeUPQ7BJ5uUKRDOzjiPcYnFooOUGCOsRk.woff) format("woff");
 }
 
-/* line 37, ../sass/prose.scss */
+/* line 46, ../sass/prose.scss */
 body {
-  background-color: #e7eec7;
   color: black;
-  font-family: "Noticia Text", sans-serif;
+  font-size: 1.5em;
+  font-family: "Noticia Text", serif;
   margin: 50px auto;
-  width: 500px;
+  width: 850px;
 }
 
-/* line 45, ../sass/prose.scss */
+/* line 54, ../sass/prose.scss */
 a {
   color: #ca2cc3;
 }
-/* line 47, ../sass/prose.scss */
+/* line 56, ../sass/prose.scss */
 a:hover {
   color: #880075;
 }
-/* line 48, ../sass/prose.scss */
+/* line 57, ../sass/prose.scss */
 a:visited {
   color: #880075;
 }
 
-/* line 51, ../sass/prose.scss */
+/* line 60, ../sass/prose.scss */
 img {
   width: 100%;
   margin: 1.5em auto;
 }
 
-/* line 56, ../sass/prose.scss */
+/* line 65, ../sass/prose.scss */
 blockquote {
-  margin: 0 20px;
-  padding: 0 0 0 10px;
+  margin: 0 3em;
+  padding: 0 0 0 0.5em;
   border-left: 3px solid #ca2cc3;
 }
+/* line 69, ../sass/prose.scss */
+blockquote p + p {
+  text-indent: 0;
+}
 
-/* line 63, ../sass/prose.scss */
+/* line 75, ../sass/prose.scss */
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
-  text-transform: lowercase;
 }
 
-/* line 69, ../sass/prose.scss */
-h1:first-letter, h2:first-letter, h3:first-letter, h4:first-letter, h5:first-letter, h6:first-letter {
-  text-transform: capitalize;
-}
-
-/* line 73, ../sass/prose.scss */
+/* line 79, ../sass/prose.scss */
 h1 {
   font-family: "Faster One", serif;
   font-size: 250%;
 }
 
-/* line 78, ../sass/prose.scss */
+/* line 84, ../sass/prose.scss */
 h2, h3, h4, h5, h6 {
   font-family: "Oleo Script Swash Caps", serif;
 }
 
-/* line 82, ../sass/prose.scss */
+/* line 88, ../sass/prose.scss */
 h2 {
   font-size: 175%;
 }
 
-/* line 86, ../sass/prose.scss */
+/* line 92, ../sass/prose.scss */
 h3, h4, h5, h6 {
   font-size: 125%;
 }
 
-/* line 90, ../sass/prose.scss */
+/* line 96, ../sass/prose.scss */
 p + p {
   margin-top: -1em;
   text-indent: 1.5em;
 }
 
-/* line 95, ../sass/prose.scss */
+/* line 102, ../sass/prose.scss */
 ul {
   list-style-type: square;
 }
 
-/* line 99, ../sass/prose.scss */
+/* line 106, ../sass/prose.scss */
+li > ul {
+  list-style-type: disc;
+}
+
+/* line 111, ../sass/prose.scss */
+li > ul > li > ul {
+  list-style-type: circle;
+}
+
+/* line 116, ../sass/prose.scss */
+a.footnote {
+  font-size: 50%;
+  vertical-align: super;
+}
+
+/* line 122, ../sass/prose.scss */
 hr {
   padding: 0;
   margin: 0;
@@ -112,16 +119,66 @@ hr {
   text-align: center;
   color: black;
 }
-
-/* line 106, ../sass/prose.scss */
+/* line 128, ../sass/prose.scss */
 hr:after {
   content: "\2724\a0 \2724\a0 \2724";
 }
 
-@media only screen and (max-width: 500px) {
-  /* line 116, ../sass/prose.scss */
+/* line 139, ../sass/prose.scss */
+.poetry pre code {
+  font-family: Georgia, Garamond, serif;
+  font-style: italic;
+  font-size: 110% !important;
+  line-height: 1.6em;
+  display: block;
+  margin-left: 1em;
+}
+
+/* line 149, ../sass/prose.scss */
+div.footnotes hr {
+  margin: 1em 0;
+  width: 75%;
+  border-style: dashed;
+  border-width: 1px 0 0 0;
+  border-color: black;
+}
+/* line 156, ../sass/prose.scss */
+div.footnotes hr:after {
+  content: "";
+}
+/* line 160, ../sass/prose.scss */
+div.footnotes p {
+  display: inline;
+}
+
+@media screen {
+  /* line 166, ../sass/prose.scss */
   body {
+    background-color: #e7eec7;
+  }
+
+  /* line 170, ../sass/prose.scss */
+  .inverted {
+    background: #343036 !important;
+  }
+  /* line 172, ../sass/prose.scss */
+  .inverted *:not(a) {
+    color: #d7d2e6 !important;
+  }
+}
+@media only screen and (max-width: 850px) {
+  /* line 179, ../sass/prose.scss */
+  body {
+    font-size: 1em;
     padding: 0 10px;
+    width: 90%;
+  }
+}
+@media print {
+  /* line 187, ../sass/prose.scss */
+  body {
+    font-size: 1em;
+    padding: 1em;
     width: 90%;
   }
 }
