@@ -43,8 +43,8 @@ a:visited {
 
 /* line 60, ../sass/prose.scss */
 img {
-  width: 100%;
-  margin: 1.5em auto;
+  max-width: 100%;
+  height: auto;
 }
 
 /* line 65, ../sass/prose.scss */
@@ -134,7 +134,12 @@ hr:after {
   margin-left: 1em;
 }
 
-/* line 149, ../sass/prose.scss */
+/* line 148, ../sass/prose.scss */
+code, pre {
+  overflow: auto;
+}
+
+/* line 153, ../sass/prose.scss */
 div.footnotes hr {
   margin: 1em 0;
   width: 75%;
@@ -142,32 +147,32 @@ div.footnotes hr {
   border-width: 1px 0 0 0;
   border-color: black;
 }
-/* line 156, ../sass/prose.scss */
+/* line 160, ../sass/prose.scss */
 div.footnotes hr:after {
   content: "";
 }
-/* line 160, ../sass/prose.scss */
+/* line 164, ../sass/prose.scss */
 div.footnotes p {
   display: inline;
 }
 
 @media screen {
-  /* line 166, ../sass/prose.scss */
+  /* line 170, ../sass/prose.scss */
   body {
     background-color: #e7eec7;
   }
 
-  /* line 170, ../sass/prose.scss */
+  /* line 174, ../sass/prose.scss */
   .inverted {
     background: #343036 !important;
   }
-  /* line 172, ../sass/prose.scss */
+  /* line 176, ../sass/prose.scss */
   .inverted *:not(a) {
     color: #d7d2e6 !important;
   }
 }
 @media only screen and (max-width: 850px) {
-  /* line 179, ../sass/prose.scss */
+  /* line 183, ../sass/prose.scss */
   body {
     font-size: 1em;
     padding: 0 10px;
@@ -175,7 +180,7 @@ div.footnotes p {
   }
 }
 @media print {
-  /* line 187, ../sass/prose.scss */
+  /* line 191, ../sass/prose.scss */
   body {
     font-size: 1em;
     padding: 1em;

@@ -58,8 +58,8 @@ a {
 }
 
 img {
-  width: 100%;
-  margin: 1.5em auto
+  max-width: 100%;
+  height: auto;
 }
 
 blockquote {
@@ -143,6 +143,10 @@ hr {
   line-height:1.6em;
   display:block;
   margin-left:1em;
+}
+
+code, pre {
+  overflow: auto;
 }
 
 div.footnotes {
