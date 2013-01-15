@@ -29,65 +29,65 @@ body {
 }
 
 /* line 54, ../sass/prose.scss */
+p + p {
+  margin-top: -1em;
+  text-indent: 1.5em;
+}
+
+/* line 60, ../sass/prose.scss */
 a {
   color: #ca2cc3;
 }
-/* line 56, ../sass/prose.scss */
+/* line 62, ../sass/prose.scss */
 a:hover {
   color: #880075;
 }
-/* line 57, ../sass/prose.scss */
+/* line 63, ../sass/prose.scss */
 a:visited {
   color: #880075;
 }
 
-/* line 60, ../sass/prose.scss */
+/* line 66, ../sass/prose.scss */
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* line 65, ../sass/prose.scss */
+/* line 71, ../sass/prose.scss */
 blockquote {
   margin: 0 3em;
   padding: 0 0 0 0.5em;
   border-left: 3px solid #ca2cc3;
 }
-/* line 69, ../sass/prose.scss */
+/* line 75, ../sass/prose.scss */
 blockquote p + p {
   text-indent: 0;
 }
 
-/* line 75, ../sass/prose.scss */
+/* line 81, ../sass/prose.scss */
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
-/* line 79, ../sass/prose.scss */
+/* line 85, ../sass/prose.scss */
 h1 {
   font-family: "Faster One", serif;
   font-size: 250%;
 }
 
-/* line 84, ../sass/prose.scss */
+/* line 90, ../sass/prose.scss */
 h2, h3, h4, h5, h6 {
   font-family: "Oleo Script Swash Caps", serif;
 }
 
-/* line 88, ../sass/prose.scss */
+/* line 94, ../sass/prose.scss */
 h2 {
   font-size: 175%;
 }
 
-/* line 92, ../sass/prose.scss */
+/* line 98, ../sass/prose.scss */
 h3, h4, h5, h6 {
   font-size: 125%;
-}
-
-/* line 96, ../sass/prose.scss */
-p + p {
-  margin-top: -1em;
-  text-indent: 1.5em;
 }
 
 /* line 102, ../sass/prose.scss */

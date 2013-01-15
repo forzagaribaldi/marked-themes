@@ -2,7 +2,7 @@
 
 ## about
 
-Some CSS for the [Marked][] markdown processor.
+Some CSS for the [Marked][] markdown previewer.
 
 [Marked]: http://markedapp.com
 
@@ -34,23 +34,23 @@ And I structure my documents like this:
     # Title
 
     By my name
-    
+
     ## Chapter one
 
     The text of chapter one. Intra-chapter sections can be nicely demarcated with one of these:
-    
+
     * * *
-    
+
     Some more of chapter one.
-    
+
     ## Chapter two
 
     I suppose you could use further sub headings like so
-    
+
     ### morning
 
     As Gregor Samsa awoke one morning from uneasy dreams he found himself transformed in his bed into a gigantic insect. He was lying on his hard, as it were armor-plated, back and when he lifted his head a little he could see his dome-like brown belly divided into stiff arched segments on top of which the bed quilt could hardly keep in position and was about to slide off completely. His numerous legs, which were pitifully thin compared to the rest of his bulk, waved helplessly before his eyes.
-    
+
     ### night
 
     I don't know I haven't read it, maybe he hits a club.

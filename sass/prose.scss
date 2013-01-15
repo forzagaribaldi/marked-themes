@@ -51,6 +51,12 @@ body {
   width: $bodywidth;
 }
 
+p+p {
+  // refers to paragraphs that directly follow a paragraph
+  margin-top: -1em;
+  text-indent: 1.5em;
+}
+
 a {
   color: $link;
   &:hover { color: $link-hover; }
@@ -91,12 +97,6 @@ h2 {
 
 h3, h4, h5, h6 {
   font-size: 125%;
-}
-
-p+p {
-  // refers to paragraphs that directly follow a paragraph
-  margin-top: -1em;
-  text-indent: 1.5em;
 }
 
 ul {
